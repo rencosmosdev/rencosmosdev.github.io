@@ -1,149 +1,349 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="google-site-verification" content="q5qtQ6hr_rb9wWSIjSSS4-mlcqKqh49E3O23LRK79ZU" />
-<title>RenCOSMOS Dev</title>
+
+<meta name="google-site-verification" content="q5qtQ6hr_rb9wWSIjSSS4-mlcqKqh49E3O23LRK79ZU">
+
+<title>Anatomy Atlas &amp; Diagnosis Game | RenCOSMOS Dev</title>
+<meta name="description" content="Anatomy Atlas & Diagnosis Game is an educational medical app featuring human anatomy, pathology resources, and a clinical diagnosis game.">
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
 
-body{
-  margin:0;
-  font-family:Inter, sans-serif;
-  background:white;
-  color:#111;
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, sans-serif;
+  background: white;
+  color: #111;
+  overflow-wrap: break-word;
+}
+
+img {
+  max-width: 100%;
 }
 
 /* HERO */
-.hero{
-  background:#dedede;
-  text-align:center;
-  padding:70px 20px 40px;
+.hero {
+  background: #dedede;
+  text-align: center;
+  padding: 70px 20px 40px;
 }
 
-.hero img{
-  width:190px;
-  height:190px;
-  border-radius:50%;
-  object-fit:cover;
-  background:white;
-  padding:5px;
+.hero img {
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: white;
+  padding: 5px;
 }
 
-.hero h1{
-  margin-top:20px;
-  font-size:28px;
-  font-weight:600;
+.hero h1 {
+  margin: 20px 0 0;
+  font-size: 28px;
+  font-weight: 600;
 }
 
-.hero p{
-  max-width:420px;
-  margin:10px auto 0;
-  font-size:13px;
-  color:#444;
-  line-height:1.6;
+.hero p {
+  max-width: 520px;
+  margin: 10px auto 0;
+  font-size: 13px;
+  color: #444;
+  line-height: 1.8;
 }
 
 /* BIG TEXT SECTION */
-.split{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  gap:90px;
-  padding:120px 40px;
+.split {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(40px, 8vw, 90px);
+  padding: 120px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.split .left{
-  font-size:72px;
-  font-weight:800;
-  line-height:0.9;
+.split .left {
+  flex: 0 0 auto;
+  font-size: clamp(48px, 6vw, 72px);
+  font-weight: 800;
+  line-height: 0.95;
 }
 
-.split .right{
-  max-width:420px;
-  font-size:13px;
-  color:#333;
-  line-height:1.6;
+.split .right {
+  flex: 0 1 420px;
+  min-width: 0;
+  font-size: 13px;
+  color: #333;
+  line-height: 1.8;
 }
 
 /* PROJECT SECTION */
-.project{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  gap:60px;
-  padding:80px 40px;
+.project {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  padding: 80px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.project img{
-  width:420px;
-  border-radius:8px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.1);
+.project img {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  flex: 0 1 420px;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
-.project .text{
-  max-width:320px;
+.project .text {
+  flex: 0 1 420px;
+  min-width: 0;
 }
 
-.project h2{
-  margin:0 0 10px;
+.project h2 {
+  margin: 0 0 18px;
+  font-size: 22px;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
 }
 
-.btn{
-  display:inline-block;
-  margin-top:15px;
-  padding:10px 18px;
-  background:#ff7a1a;
-  color:white;
-  font-size:12px;
-  font-weight:600;
-  text-decoration:none;
+.project p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.8;
+  color: #444;
+}
+
+.project p + p {
+  margin-top: 16px;
+}
+
+.project .notice {
+  font-size: 12px;
+  color: #555;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 20px;
+  background: #ff7a1a;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 3px;
+  transition: background 0.2s ease;
+}
+
+.btn:hover {
+  background: #e9660b;
 }
 
 /* ABOUT */
-.about{
-  padding:80px 40px;
-  max-width:800px;
-  margin:auto;
+.about {
+  padding: 80px 40px;
+  max-width: 880px;
+  margin: auto;
 }
 
-.about h2{
-  font-size:16px;
-  margin-bottom:10px;
+.about h2 {
+  font-size: 18px;
+  margin-bottom: 14px;
 }
 
-.about p{
-  font-size:13px;
-  line-height:1.6;
-  color:#444;
+.about p {
+  font-size: 13px;
+  line-height: 1.8;
+  color: #444;
 }
 
 /* FOOTER */
-.footer{
-  background:url("assets/footer.png") center/cover no-repeat;
-  color:white;
-  text-align:center;
-  padding:80px 20px;
-  position:relative;
+.footer {
+  background: url("assets/footer.png") center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+  position: relative;
 }
 
-.footer::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:rgba(0,0,0,0.6);
+.footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
 }
 
-.footer-content{
-  position:relative;
+.footer-content {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-.footer small{
-  display:block;
-  margin-top:10px;
-  opacity:0.7;
+.footer p {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.footer small {
+  display: block;
+  margin-top: 10px;
+  opacity: 0.8;
+  font-size: 11px;
+}
+
+/* TABLETS */
+@media (max-width: 900px) {
+  .split {
+    gap: 40px;
+    padding: 80px 30px;
+  }
+
+  .project {
+    gap: 35px;
+    padding: 70px 30px;
+  }
+
+  .project h2 {
+    font-size: 20px;
+  }
+}
+
+/* MOBILE PHONES */
+@media (max-width: 600px) {
+  .hero {
+    padding: 45px 22px 35px;
+  }
+
+  .hero img {
+    width: 145px;
+    height: 145px;
+  }
+
+  .hero h1 {
+    font-size: 23px;
+    line-height: 1.35;
+  }
+
+  .hero p {
+    max-width: 100%;
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  /* Stack the large heading and paragraph */
+  .split {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 28px;
+    padding: 60px 25px;
+  }
+
+  .split .left {
+    font-size: 52px;
+    line-height: 0.95;
+  }
+
+  .split .right {
+    flex: none;
+    width: 100%;
+    max-width: 100%;
+    font-size: 14px;
+    line-height: 1.85;
+  }
+
+  /* Stack the app image and its description */
+  .project {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 30px;
+    padding: 50px 22px;
+  }
+
+  .project img {
+    flex: none;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .project .text {
+    flex: none;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .project h2 {
+    font-size: 21px;
+    line-height: 1.4;
+  }
+
+  .project p {
+    font-size: 14px;
+    line-height: 1.85;
+  }
+
+  .project .notice {
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+  .btn {
+    padding: 13px 20px;
+    font-size: 12px;
+  }
+
+  .about {
+    padding: 55px 25px;
+  }
+
+  .about h2 {
+    font-size: 18px;
+  }
+
+  .about p {
+    font-size: 14px;
+    line-height: 1.85;
+  }
+
+  .footer {
+    padding: 60px 22px;
+  }
+
+  .footer p {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+}
+
+/* SMALL MOBILE PHONES */
+@media (max-width: 360px) {
+  .hero h1 {
+    font-size: 21px;
+  }
+
+  .split .left {
+    font-size: 46px;
+  }
+
+  .project h2 {
+    font-size: 19px;
+  }
 }
 </style>
 </head>
@@ -152,10 +352,12 @@ body{
 
 <!-- HERO -->
 <section class="hero">
-  <img src="hero.png" alt="logo">
+  <img src="hero.png" alt="RenCOSMOS logo">
+
   <h1>RenCOSMOS Dev</h1>
+
   <p>
-    RenCOSMOS is a digital studio focused on building apps and educational tools. RenCosmos is the composition of Ren, from ancient Egyptian, and Cosmos, the entirety of the universe. In ancient Egypt, the word "Ren" referred to someone's name. Names were the eternal breath of being, an immortal spark inscribed in the ​firmament. They believed that as long as the ren was spoken and remembered, the individual's soul would flourish in eternity.
+    RenCOSMOS is a digital studio focused on building apps and educational tools. RenCosmos is the composition of Ren, from ancient Egyptian, and Cosmos, the entirety of the universe. In ancient Egypt, the word "Ren" referred to someone's name. Names were the eternal breath of being, an immortal spark inscribed in the firmament. They believed that as long as the ren was spoken and remembered, the individual's soul would flourish in eternity.
   </p>
 </section>
 
@@ -172,30 +374,56 @@ body{
 
 <!-- PROJECT -->
 <section class="project">
-  <img src="app1.png" alt="app">
+  <img src="app1.png" alt="Anatomy Atlas & Diagnosis Game app preview">
 
   <div class="text">
-    <h2>MEDICINE LEARNING HUB</h2>
-    <p>
-      Educational medical application designed to support students of medicine, nursing, and all health-related fields. 
-      Anatomy Section: Includes an atlas of the human body organized by systems, allowing users to study structures clearly and intuitively. The atlas contains an extensive collection of professional-quality 3D medical images and detailed anatomical illustrations.
-      Pathology Section: Designed to help students better understand diseases and medical conditions. It features a symptom-based search system that allows users to explore pathologies more easily and improve clinical comprehension during study sessions.
-      "Guess the Diagnosis" Game: Designed to train students using real clinical cases. It includes medical images, multiple-choice questions, lives, coins, and both global and country-based leaderboards.
-      Medicine Learning Hub. Atlas is currently under active development. The application receives weekly updates.
+    <h2>Anatomy Atlas &amp; Diagnosis Game</h2>
 
-Important Notice: This application is intended solely for educational and informational purposes. It does not provide medical advice, diagnosis, or treatment, and should not be used as a substitute for professional medical care or clinical judgment.
+    <p>
+      An educational medical application designed to support students of medicine, nursing, and all health-related fields.
     </p>
-    <a class="btn" href="https://play.google.com/store/apps/details?id=com.rencosmos.humanbodymedicalatlas">DOWNLOAD</a>
+
+    <p>
+      <strong>Anatomy Atlas:</strong>
+      Explore the human body through an atlas organized by anatomical systems, featuring professional medical illustrations and detailed anatomical structures.
+    </p>
+
+    <p>
+      <strong>Pathology Section:</strong>
+      Learn about diseases and medical conditions with educational resources and a symptom-based search system designed to support medical study.
+    </p>
+
+    <p>
+      <strong>Guess the Diagnosis:</strong>
+      Test your clinical knowledge with medical cases, medical images, multiple-choice questions, lives, coins, and global and country-based leaderboards.
+    </p>
+
+    <p>
+      The application is regularly updated with improvements and educational content.
+    </p>
+
+    <p class="notice">
+      <strong>Important Notice:</strong>
+      This application is intended solely for educational and informational purposes. It does not provide medical advice, diagnosis, or treatment, and should not be used as a substitute for professional medical care or clinical judgment.
+    </p>
+
+    <a class="btn"
+       href="https://play.google.com/store/apps/details?id=com.rencosmos.humanbodymedicalatlas"
+       target="_blank"
+       rel="noopener noreferrer">
+      DOWNLOAD
+    </a>
   </div>
 </section>
 
 <!-- ABOUT -->
 <section class="about">
   <h2>Who we are</h2>
+
   <p>
     VANESSA LOZADA GIL<br><br>
     Owner and main developer. Multidisciplinary creative focused on design, publishing and mobile applications.
-    The studio merges technology and visual storytelling to create educational systems and apps like Medicine Learning Hub.
+    The studio merges technology and visual storytelling to create educational systems and apps like Anatomy Atlas &amp; Diagnosis Game.
   </p>
 </section>
 
