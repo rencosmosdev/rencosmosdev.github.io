@@ -173,6 +173,120 @@ img {
   color: #444;
 }
 
+/* PATREON SECTION */
+.patreon {
+  position: relative;
+  overflow: hidden;
+  background: #f8f3f6;
+  padding: 85px 25px;
+}
+
+.patreon-content {
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.patreon-label {
+  margin: 0 0 16px;
+  color: #a34d70;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+.patreon h2 {
+  max-width: 680px;
+  margin: 0 auto 22px;
+  color: #211b20;
+  font-size: clamp(27px, 4vw, 42px);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
+
+.patreon-intro {
+  max-width: 650px;
+  margin: 0 auto 18px;
+  color: #51464e;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.patreon-description {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #51464e;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.patreon-reasons {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  margin-top: 45px;
+  text-align: left;
+}
+
+.patreon-reason {
+  padding: 24px 20px;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid #eee2e9;
+  border-radius: 8px;
+}
+
+.patreon-icon {
+  display: block;
+  margin-bottom: 14px;
+  font-size: 27px;
+  line-height: 1;
+}
+
+.patreon-reason h3 {
+  margin: 0 0 10px;
+  color: #292129;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.patreon-reason p {
+  margin: 0;
+  color: #625660;
+  font-size: 12px;
+  line-height: 1.85;
+}
+
+.patreon .btn-patreon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 38px;
+  padding: 15px 25px;
+  background: #ff7a1a;
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 4px;
+  box-shadow: 0 5px 15px rgba(255, 122, 26, 0.15);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.patreon .btn-patreon:hover {
+  background: #e9660b;
+  transform: translateY(-2px);
+}
+
+.patreon-note {
+  margin: 16px 0 0;
+  color: #796a74;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
 /* FOOTER */
 .footer {
   background: url("assets/footer.png") center/cover no-repeat;
@@ -221,6 +335,14 @@ img {
 
   .project h2 {
     font-size: 20px;
+  }
+
+  .patreon-reasons {
+    gap: 16px;
+  }
+
+  .patreon-reason {
+    padding: 20px 16px;
   }
 }
 
@@ -321,6 +443,51 @@ img {
     line-height: 1.85;
   }
 
+  /* Patreon on mobile */
+  .patreon {
+    padding: 60px 22px;
+  }
+
+  .patreon h2 {
+    font-size: 29px;
+    letter-spacing: -0.5px;
+  }
+
+  .patreon-intro {
+    font-size: 14px;
+    line-height: 1.85;
+  }
+
+  .patreon-description {
+    font-size: 13px;
+    line-height: 1.85;
+  }
+
+  .patreon-reasons {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-top: 32px;
+  }
+
+  .patreon-reason {
+    padding: 22px;
+  }
+
+  .patreon-reason h3 {
+    font-size: 15px;
+  }
+
+  .patreon-reason p {
+    font-size: 13px;
+  }
+
+  .patreon .btn-patreon {
+    width: 100%;
+    max-width: 320px;
+    padding: 15px 18px;
+    font-size: 13px;
+  }
+
   .footer {
     padding: 60px 22px;
   }
@@ -343,6 +510,10 @@ img {
 
   .project h2 {
     font-size: 19px;
+  }
+
+  .patreon h2 {
+    font-size: 26px;
   }
 }
 </style>
@@ -425,6 +596,75 @@ img {
     Owner and main developer. Multidisciplinary creative focused on design, publishing and mobile applications.
     The studio merges technology and visual storytelling to create educational systems and apps like Anatomy Atlas &amp; Diagnosis Game.
   </p>
+</section>
+
+<!-- PATREON -->
+<section class="patreon">
+  <div class="patreon-content">
+
+    <p class="patreon-label">💖 Support our mission</p>
+
+    <h2>Help us make medical education accessible to everyone</h2>
+
+    <p class="patreon-intro">
+      At RenCOSMOS, we conduct extensive research to create high-quality educational content that is accurate, engaging, and accessible.
+    </p>
+
+    <p class="patreon-description">
+      One of our most important projects is <strong>Anatomy Atlas &amp; Diagnosis Game</strong>, from the Medicine Learning Hub project: a free medical learning platform designed for students, educators, and healthcare enthusiasts around the world.
+    </p>
+
+    <p class="patreon-description" style="margin-top: 16px;">
+      We believe access to quality education should not be limited by economic barriers. Our mission is to reach underserved and vulnerable communities by keeping our atlas and educational resources freely available.
+    </p>
+
+    <div class="patreon-reasons">
+
+      <div class="patreon-reason">
+        <span class="patreon-icon" aria-hidden="true">🔬</span>
+        <h3>Research &amp; Educational Content</h3>
+        <p>
+          Your support helps fund research and the creation of accurate, engaging, high-quality medical learning resources.
+        </p>
+      </div>
+
+      <div class="patreon-reason">
+        <span class="patreon-icon" aria-hidden="true">💻</span>
+        <h3>App Development</h3>
+        <p>
+          Help us develop new features, expand our educational content, and maintain Medicine Learning Hub.
+        </p>
+      </div>
+
+      <div class="patreon-reason">
+        <span class="patreon-icon" aria-hidden="true">🌸</span>
+        <h3>Free Education for Everyone</h3>
+        <p>
+          Your contribution helps us keep educational resources accessible to students and communities regardless of their economic circumstances.
+        </p>
+      </div>
+
+    </div>
+
+    <p class="patreon-description" style="margin-top: 30px;">
+      Every contribution makes a difference. By becoming a Patreon supporter, you help us continue building a platform dedicated to making medical education more accessible to everyone.
+    </p>
+
+    <a class="btn-patreon"
+       href="https://patreon.com/rencosmos"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Support RenCOSMOS on Patreon">
+      <span aria-hidden="true">♥</span>
+      SUPPORT US ON PATREON
+      <span aria-hidden="true">↗</span>
+    </a>
+
+    <p class="patreon-note">
+      Support independent educational development and help us keep learning resources free.
+    </p>
+
+  </div>
 </section>
 
 <!-- FOOTER -->
